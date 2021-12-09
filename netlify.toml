@@ -1,2 +1,17 @@
+# Netlify Dev
+# https://cli.netlify.com/netlify-dev/#netlifytoml-dev-block
+
+# 제품 모드
 [build]
-    functions= "functions"
+    command = "npm run build"
+    functions = "functions"
+    publish = "dist"
+
+
+[dev]
+    framework = "#custom"
+    command = "npm run dev:webpack"
+    targetPort = 8079
+    port = 8080
+    publish = "dist"
+    autolaunch = false
